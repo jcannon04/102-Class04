@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Notes</title>
+
+    <!-- Styles for testing. Will go in stylesheet -->
+    <style>
+      /* Body */
+      body {
+        font-family: "Lato", sans-serif;
+      }
+
+      /* Top Navigation */
+
+      .topnav {
+        background-color: #333;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        overflow: hidden;
+        padding: 1px;
+      }
+
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* .topnav a.active {
+        background-color: #04aa6d;
+        color: white;
+      } */
+
+      /* Side Navigation */
+
+      .sidenav {
+        width: 10%;
+        position: fixed;
+        z-index: 1;
+        top: 50px;
+        left: 10px;
+        overflow-x: hidden;
+        padding: 8px 0;
+      }
+
+      .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        color: inherit;
+        font-size: .9em;
+        /* border: 2px outset lightgray; */
+        display: block;
+      }
+
+      .sidenav a:hover {
+        color: #2196f3;
+      }
+
+      /* Main Content */
+
+      .main {
+        margin-top: 2em;
+
+        margin-left: 18%;
+        font-size: 1.2em;
+        padding: 0px 10px;
+        overflow-x: hidden;
+      }
+
+      /* Media Queries */
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top navigation menu -->
+    <nav class="topnav">
+      <a href="#home">Home</a>
+      <a href="#">Markdown</a>
+      <a href="#">Git</a>
+      <a href="#">Javascript</a>
+      <a href="#">HTML</a>
+      <a href="#">CSS</a>
+      <a href="#">Linux/Bash</a>
+    </nav>
+
+    <!-- Sidebar Navigation -->
+    <nav id="side-nav" class="sidenav">
+    <ul>
+      <li><a href="#intro-section">Introduction</a></li>
+      <li><a href="#heading-section">Headings</a></li>
+      <li><a href="#text-decoration-section">Bold and Italics</a></li>
+      <li><a href="#list-section">Lists</a></li>
+      <li><a href="#link-section">Links</a></li>
+      <li><a href="#image-section">Images</a></li>
+      <li><a href="#code-section">Code Blocks</a></li>
+      <!-- <a href="#footnote-section">Footnotes</a> -->
+      <!-- <a href="#table-section">Tables</a> -->
+      <li><a href="#block-quote-section">Block Quotes</a></li>
+      <!-- <a href="#inline-html-section">Inline HTML</a> -->
+      <!-- <a href="#line-break-section">Line Breaks</a> -->
+      <!-- <a href="#task-list-section">Task Lists</a> -->
+      <!-- <a href="#youtube-section">YouTube Videos</a> -->
+      </ul>
+    </nav>
+
+    <!-- Main Page Content -->
+
+    <!-- Intro Section -->
+    <main class="main">
+      <section id="intro-section">
+        <h1>Markdown Cheat Sheet</h1>
+        <p>
+          GitHub Flavored Markdown(GFM) helps you to format your text in a .md
+          file on GitHub. You can use Markdown to add links, images, youtube
+          videos, and other content into your document. It also let you decorate
+          your text and format it logically with headings, paragraphs, tables,
+          and lists. You can also insert code blocks, block quotes, footnotes,
+          and more. You also might want to checkout the
+          <a
+            href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+            >cheat sheet</a
+          >
+          that these notes are based on and the
+          <a href="https://github.github.com/gfm/">GFM Specs</a> for further
+          reference.
+        </p>
+        <p>
+          Thanks for reading and if you like anything about these notes you can
+          always
+          <a href="https://www.buymeacoffee.com/cannontech"
+            ><img
+              src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
+              alt='"Buy Me A Coffee"'
+          /></a>
+          so I can stay up and write more helpful notes for you guys. Thanks for
+          your support.
+        </p>
+      </section>
+
+      <!-- Heading Section -->
+      <section id="heading-section">
+        <h2>Headings</h2>
+        <p>
+          Markdown has 6 choices for headings. A heading should start with pound
+          signs (1-6), followed by a space and then the text for your heading.
+          One preceding pound sign results in the largest heading six pounds
+          results in the smallest.
+        </p>
+        <pre><code class="language-markdown">
+# H1
+
+## H2
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6
+  </code></pre>
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5>H5</h5>
+        <h6>H6</h6>
+        <p>You can also use the underline syntax for H1's and H2's like so</p>
+        <pre><code class="language-markdown">
+Alt-H1
+======
+  
+Alt-H2
+------
+  </code></pre>
+        <h1>H1</h1>
+        <h2>H2</h2>
+      </section>
+
+      <!-- Bold and Italics Section -->
+      <section id="text-decoration-section">
+        <h2>Decorating text</h2>
+        <pre><code class="language-markdown">
+You add italics (emphasis) by wrapping your text in *asterisks* or _underscores_.
+  
+Bold (strong emphasis) is added by wrapping your text in double **asterisks** and __underscores__
+  
+or you can combine the two with **asterisks and _underscores_**.
+  
+you can also add strike through text with tildes. ~~Scratch this.~~
+  </code></pre>
+        <p>
+          You add italics (emphasis) by wrapping your text in
+          <em>asterisks</em> or <em>underscores</em>.
+        </p>
+        <p>
+          Bold (strong emphasis) is added by wrapping your text in double
+          <strong>asterisks</strong> and <strong>underscores</strong>
+        </p>
+        <p>
+          or you can combine the two with
+          <strong>asterisks and <em>underscores</em></strong
+          >.
+        </p>
+        <p>
+          you can also add strike through text with tildes. <s>Scratch this.</s>
+        </p>
+      </section>
+
+      <!-- List Section -->
+      <section id="list-section">
+        <h2>Lists</h2>
+        <p>
+          Ordered list items are proceeded by a number and a period. Unordered
+          list items can start with *, +, or -
+        </p>
+        <pre><code class="language-markdown">
+1. First list ordered list item
+    * insert spaces when making a sub list
+    - another sub list item
+    + and a third
+2. Second ordered list item
+    1. ordered sub lists work as well
+  </code></pre>
+
+        <ol>
+          <li>
+            <p>First list ordered list item</p>
+            <ul>
+              <li>
+                <p>* insert spaces when making a sub list</p>
+              </li>
+              <li>
+                <p>- another sub list item</p>
+              </li>
+              <li>
+                <p>+ and a third</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Second ordered list item</p>
+            <ol>
+              <li>
+                <p>ordered sub lists work as well</p>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Links -->
+      <section id="link-section">
+        <h2>Links</h2>
+        <p>
+          There are two styles of links, inline links and reference links. You
+          can either put the link address in the same line as your hyperlink or
+          use a reference address and define the link later in the document
+        </p>
+        <pre><code class="language-markdown">
+**inline style**
+[inline-style link](https://www.google.com)
+
+[inline-style link with title](https://www.google.com &quot;Google's Homepage&quot;)
+
+**reference style**
+[reference-style link][reference text]
+
+[relative reference link ](../blob/master/LICENSE)
+
+[You can use numbers to reference links][1]
+
+Or you can use the [link text itself].
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+  </code></pre>
+        <p><strong>inline style</strong></p>
+        <p><a href="https://www.google.com">inline-style link</a></p>
+        <p>
+          <a href="https://www.google.com" title="Google's Homepage"
+            >inline-style link with title</a
+          >
+        </p>
+        <p><strong>reference style</strong></p>
+        <p><a href="https://www.mozilla.org">reference-style link</a></p>
+        <p><a href="../blob/master/LICENSE">relative reference link </a></p>
+        <p>
+          <a href="http://slashdot.org"
+            >You can use numbers to reference links</a
+          >
+        </p>
+        <p>Or you can use the <a href="http://www.reddit.com">link text</a>.</p>
+      </section>
+
+      <!-- Image Section -->
+      <section id="image-section">
+        <h2>Images</h2>
+        <p>
+          Images, like links, have reference style and inline style. Inline
+          style images start with an exclamation point, square brackets
+          enclosing the alt text and then the URL or relative path to the image
+          surround by parentheses. Reference style images start with the
+          exclamation and alt text but then have the reference name (Arbitrary
+          and chosen by you) surrounded by square braces. The image url can be
+          placed later in the document as show below.
+        </p>
+        <pre><code class="language-markdown">**inline style**
+  
+  ![alt text](https://cdn.iconscout.com/icon/premium/png-512-thumb/markdown-4887934-4072470.png?f=avif&amp;w=128)
+  
+  **reference style**
+  
+  ![alt text][markdown logo]
+  
+  [markdown logo]: https://cdn.iconscout.com/icon/premium/png-512-thumb/markdown-4887934-4072470.png?f=avif&amp;w=128
+  </code></pre>
+        <p><strong>inline style</strong></p>
+        <p>
+          <img
+            src="https://cdn.iconscout.com/icon/premium/png-512-thumb/markdown-4887934-4072470.png?f=avif&amp;w=128"
+            alt="alt text"
+          />
+        </p>
+        <p><strong>reference style</strong></p>
+        <p>
+          <img
+            src="https://cdn.iconscout.com/icon/premium/png-512-thumb/markdown-4887934-4072470.png?f=avif&amp;w=128"
+            alt="alt text"
+          />
+        </p>
+      </section>
+
+      <!-- Code Section -->
+      <section id="code-section">
+        <h2>Code</h2>
+        <p>Code can be added either inline or in code blocks.</p>
+        <p><strong>inline code</strong></p>
+        <pre><code class="language-markdown">inline code is surrounded by backticks `insert code here`. 
+  </code></pre>
+        <p>
+          inline code is surrounded by backticks <code>insert code here</code>.
+        </p>
+        <p><strong>code blocks</strong></p>
+        <pre><code class="language-markdown">Code blocks are surround by triple backticks
+  
+  ```
+  insert code here
+  ```
+  </code></pre>
+        <p>Code blocks are surround by triple backticks</p>
+        <pre><code>
+  insert code here
+  </code></pre>
+        <!-- <p><strong>syntax highlighting</strong></p>
+      <p>
+        With some markdown renderers, code blocks offer syntax highlighting for
+        many programming languages and other types of code. To add syntax
+        highlighting for a code block just write the name of the language after
+        the triple backticks but before the new line. How you specify the
+        language may differ from renderer to renderer if they support it all.
+      </p>
+      <pre><code class="language-markdown">```javascript
+  console.log(&quot;hello, world!&quot;);
+  ```
+  
+  ```python
+  print &quot;hello, world&quot;
+  ```
+  
+  ```markdown
+  **hello, world!**
+  ```
+  </code></pre>
+      <pre><code class="language-javascript">console.log(&quot;hello, world!&quot;);
+  </code></pre>
+      <pre><code class="language-python">print &quot;hello, world&quot;
+  </code></pre>
+      <pre><code class="language-markdown">**hello, world!**
+  </code></pre>
+      <p>
+        don't forget to tell markdown which language you need the highlighting
+        for
+      </p>
+      <pre><code>```
+  #include &lt;iostream&gt;
+  
+  int main() {
+      std::cout &lt;&lt; &quot;You forgot to tell me what language this is dummy&quot;;
+      return 0;
+  }
+  ```
+  
+  ```c++
+  #include &lt;iostream&gt;
+  
+  int main() {
+      std::cout &lt;&lt; &quot;oooh pretty&quot;;
+      return 0;
+  }
+  ```
+  </code></pre>
+      <pre><code>#include &lt;iostream&gt;
+  
+  int main() {
+      std::cout &lt;&lt; &quot;You forgot to tell me what language this is dummy&quot;;
+      return 0;
+  }
+  </code></pre>
+      <pre><code class="language-c++">#include &lt;iostream&gt;
+  
+  int main() {
+      std::cout &lt;&lt; &quot;oooh pretty&quot;;
+      return 0;
+  }
+  </code></pre> -->
+      </section>
+
+      <!-- Footnote Section -->
+      <!-- <section id="footnote-section">
+      <h2>Footnotes</h2>
+      <p>
+        Footnotes aren't officially part of markdown, but are supported by GFM.
+        To make a footnote use square brackets with a caret symbol and a number
+        or word to link to the reference.
+      </p>
+      <pre><code class="language-markdown">Your first footnote[^1]
+  
+  Another footnote with multiple lines in the description[^2]
+  
+  And finally using a word instead of a number[text]
+  
+  [^1]: I did it!
+  [^2]: if you want to use more than one line
+    be certain to include 2 spaces after each line break
+  [text]: I told you that you didn’t have to use numbers
+  </code></pre>
+      <p>Your first footnote[^1]</p>
+      <p>Another footnote with multiple lines in the description[^2]</p>
+      <p>And finally using a word instead of a number[^text]</p>
+      <p>
+        [^1]: I did it! [^2]: If you want to use more than one line be certain
+        to include 2 spaces after each line break [^text]:<br />
+        I told you that you didn’t have to use numbers. They will still show up
+        numbered in your text but this can make it easier for you (the author)
+        to identify. You can also use this &quot;4 spaces after the
+        newline&quot; syntax
+      </p>
+      <p>
+        You can see these footnotes by scrolling to the bottom of this page, or
+        by clicking the number
+      </p>
+    </section> -->
+
+      <!-- Table Section
+    <section id="table-section">
+      <h2>Tables</h2>
+      <p>
+        Tables are not part of Markdown but are include in GFM. You can use
+        table to organize and present some simple data in stead of having to
+        copy a spreadsheet from some other application
+      </p>
+      <pre><code class="language-markdown">| Col 1 | Col 2 | Col 3 |
+  |-------|:-----:|------:|
+  |left   |center |right  |
+  |very   |simple |table  |
+  
+  You don't need the exterior pipes (|). This table is formatted very well in the markdown, but you can use less pretty markdown as you follow the basic syntax. You need at least 3 dashes under the each header column
+  
+  Col 1 | Col 2 | Col 3 
+  ---|---|---
+  still|renders |okay
+  less|organized|table  
+  </code></pre>
+      <table>
+        <thead>
+          <tr>
+            <th>Col 1</th>
+            <th style="text-align: center">Col 2</th>
+            <th style="text-align: right">Col 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>left</td>
+            <td style="text-align: center">center</td>
+            <td style="text-align: right">right</td>
+          </tr>
+          <tr>
+            <td>very</td>
+            <td style="text-align: center">simple</td>
+            <td style="text-align: right">table</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        You don't need the exterior pipes (|). This table is formatted very well
+        in the markdown, but you can use less pretty markdown as you follow the
+        basic syntax. You need at least 3 dashes under the each header column
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Col 1</th>
+            <th>Col 2</th>
+            <th>Col 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>still</td>
+            <td>renders</td>
+            <td>okay</td>
+          </tr>
+          <tr>
+            <td>less</td>
+            <td>organized</td>
+            <td>table</td>
+          </tr>
+        </tbody>
+      </table>
+    </section> -->
+
+      <!-- Block Quote Section -->
+      <section id="block-quote-section">
+        <h2>Block quotes</h2>
+        <pre><code class="language-markdown">
+&gt; Every line of a block quote
+&gt; must start with a greater than sign
+  
+you can also easily break out of them
+  
+&gt; and then return to them later
+  </code></pre>
+        <blockquote>
+          <p>Every line of a block quote must start with a greater than sign</p>
+        </blockquote>
+        <p>you can also easily break out of them</p>
+        <blockquote>
+          <p>and then return to them later</p>
+        </blockquote>
+      </section>
+
+      <!-- Inline HTML Section -->
+      <!-- <section id="inline-html-section">
+      <h2>Inline HTML</h2>
+      <pre><code class="language-html">&lt;section&gt;
+      &lt;h1&gt;Inline HTML&lt;/h1&gt;
+      &lt;p&gt;adding HTML directly into your markdown can work pretty well here's a link to the 
+          &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML&quot;&gt;MDN HTML DOCS&lt;/a&gt; 
+          if you want to learn more about HTML
+      &lt;/p&gt;
+  &lt;/section&gt;
+  </code></pre>
+      <p>
+        &lt;section&gt; &lt;h1&gt;Inline HTML&lt;/h1&gt; &lt;p&gt;adding HTML
+        directly into your markdown can work pretty well here's a link to the
+        &lt;a
+        href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML&quot;&gt;MDN
+        HTML DOCS&lt;/a&gt; if you want to learn more about html &lt;/p&gt;
+        &lt;/section&gt;
+      </p>
+    </section> -->
+
+      <!-- Line Break Section
+    <section id="line-break-section">
+      <h2>Line Breaks</h2>
+      <pre><code class="language-markdown">You can experiment with &quot;Markdown Toggle&quot; to experiment and insert line breaks to see how they work 
+  
+  But inserting two newlines between lines starts a new paragraph 
+  and inserting only one just starts a new line 
+  </code></pre>
+      <p>
+        You can experiment with &quot;Markdown Toggle&quot; to experiment and
+        insert line breaks to see how they work
+      </p>
+      <p>
+        But inserting two newlines between lines starts a new paragraph and
+        inserting only one just starts a new line
+      </p>
+    </section> -->
+
+      <!-- Task List Section
+    <section id="task-list-section">
+      <h2>Task Lists</h2>
+      <p>
+        Task lists allow for you to make checkboxes in Mark down. Simply start
+        with an asterisk like a regular list then the put either empty square
+        brackets for uncompleted tasks or put an x in the brackets for a
+        completed task
+      </p>
+      <ul>
+        <li>[x] Task 1</li>
+        <li>[x] Task 2</li>
+        <li>[ ] Task 3</li>
+      </ul>
+    </section> -->
+
+      <!-- Youtube Video Section
+    <section id="youtube-section">
+      <h2>Youtube Videos</h2>
+      <p>
+        You can't directly imbed youtube videos but you can link them with a
+        their thumbnail photo
+      </p>
+      <pre><code class="language-markdown">
+  &lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=HUBNt18RFbo&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://img.youtube.com/vi/HUBNt18RFbo/0.jpg&quot; 
+  alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;
+  </code></pre>
+      <p>
+        &lt;a
+        href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=HUBNt18RFbo&quot;
+        target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;https://img.youtube.com/vi/HUBNt18RFbo/0.jpg&quot;
+        alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot;
+        height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;
+      </p>
+      <p>you can also use a normal link as seen in the link section</p>
+    </section> -->
+
+      <!-- More Resources Section -->
+
+      <!-- <section id="more-resources-section">
+      <h2>Things I want to learn more about</h2>
+      <ul>
+        <li>Other Markdown Flavors</li>
+        <li>Markdown Specification</li>
+      </ul>
+      <p><strong>resources</strong></p>
+      <ul>
+        <li><a href="https://github.github.com/gfm/">GFM Specification</a></li>
+      </ul>
+    </section> -->
+    </main>
+  </body>
+</html>
