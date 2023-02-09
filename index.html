@@ -13,43 +13,43 @@
     <nav class="topnav">
       <div class="logo">
         <a href="#home"
-          ><img
-            class="logo-img"
-            src="https://img.icons8.com/material-outlined/48/null/code-file.png"
-        /></a>
+          ><img src="https://img.icons8.com/ios/50/FFFFFF/code-file.png"/>
+        </a>
       </div>
-      <a href="#">Linux/Bash</a>
-      <a href="#">CSS</a>
+      <a href="#">Markdown</a>
       <a href="#">HTML</a>
+      <a href="#">CSS</a>
       <a href="#">Javascript</a>
       <a href="#">Git</a>
-      <a href="#">Markdown</a>
-    </nav>
+      <a href="#">Linux/Bash</a>
 
+    </nav>
     <!-- Sidebar Navigation -->
     <nav id="side-nav" class="sidenav">
-      <a href="#intro-section">Introduction</a>
-      <a href="#heading-section">Headings</a>
-      <a href="#text-decoration-section">Bold and Italics</a>
-      <a href="#list-section">Lists</a>
-      <a href="#link-section">Links</a>
-      <a href="#image-section">Images</a>
-      <a href="#code-section">Code Blocks</a>
+      <a class="sidenav-link" href="#intro-section">Introduction</a>
+      <a class="sidenav-link" href="#heading-section">Headings</a>
+      <a class="sidenav-link" href="#text-decoration-section">Bold and Italics</a>
+      <a class="sidenav-link" href="#list-section">Lists</a>
+      <a class="sidenav-link" href="#link-section">Links</a>
+      <a class="sidenav-link" href="#image-section">Images</a>
+      <a class="sidenav-link" href="#code-section">Code Blocks</a>
       <!-- <a href="#footnote-section">Footnotes</a> -->
       <!-- <a href="#table-section">Tables</a> -->
-      <a href="#block-quote-section">Block Quotes</a>
+      <a class="sidenav-link" href="#block-quote-section">Block Quotes</a>
       <!-- <a href="#inline-html-section">Inline HTML</a> -->
       <!-- <a href="#line-break-section">Line Breaks</a> -->
       <!-- <a href="#task-list-section">Task Lists</a> -->
       <!-- <a href="#youtube-section">YouTube Videos</a> -->
+      <button class="sidenav-toggle">&lt;&lt;  &gt;&gt;</button>
     </nav>
 
     <!-- Main Page Content -->
-
+    <h1 id="welcome"></h1>
     <!-- Intro Section -->
     <main class="main">
       <section id="intro-section">
         <h1>Markdown Cheat Sheet</h1>
+        <div class="section-content"></div>
         <p>
           GitHub Flavored Markdown(GFM) helps you to format your text in a .md
           file on GitHub. You can use Markdown to add links, images, youtube
@@ -69,18 +69,20 @@
           Thanks for reading and if you like anything about these notes you can
           always
           <a href="https://www.buymeacoffee.com/cannontech"
-            ><img
+            ><img class="buy-me-a-coffee"
               src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
               alt='"Buy Me A Coffee"'
           /></a>
           so I can stay up and write more helpful notes for you guys. Thanks for
           your support.
         </p>
+      </div>
       </section>
 
       <!-- Heading Section -->
       <section id="heading-section">
         <h2>Headings</h2>
+        <div class="section-content">
         <p>
           Markdown has 6 choices for headings. A heading should start with pound
           signs (1-6), followed by a space and then the text for your heading.
@@ -121,6 +123,7 @@ Alt-H2
       <!-- Bold and Italics Section -->
       <section id="text-decoration-section">
         <h2>Decorating text</h2>
+        <div class="section-content">
         <pre><code class="language-markdown">
 You add italics (emphasis) by wrapping your text in *asterisks* or _underscores_.
   
@@ -146,10 +149,13 @@ you can also add strike through text with tildes. ~~Scratch this.~~
         <p>
           you can also add strike through text with tildes. <s>Scratch this.</s>
         </p>
+      </div>
+    </div>
       </section>
 
       <!-- List Section -->
       <section id="list-section">
+        <div class="section-content">
         <h2>Lists</h2>
         <p>
           Ordered list items are proceeded by a number and a period. Unordered
@@ -188,11 +194,13 @@ you can also add strike through text with tildes. ~~Scratch this.~~
             </ol>
           </li>
         </ol>
+        </div>
       </section>
 
       <!-- Links -->
       <section id="link-section">
         <h2>Links</h2>
+        <div class="section-content">
         <p>
           There are two styles of links, inline links and reference links. You
           can either put the link address in the same line as your hyperlink or
@@ -233,11 +241,13 @@ Or you can use the [link text itself].
           >
         </p>
         <p>Or you can use the <a href="http://www.reddit.com">link text</a>.</p>
+        </div>
       </section>
 
       <!-- Image Section -->
       <section id="image-section">
         <h2>Images</h2>
+        <div class="section-content">
         <p>
           Images, like links, have reference style and inline style. Inline
           style images start with an exclamation point, square brackets
@@ -271,11 +281,13 @@ Or you can use the [link text itself].
             alt="alt text"
           />
         </p>
+        </div>
       </section>
 
       <!-- Code Section -->
       <section id="code-section">
         <h2>Code</h2>
+        <div class="section-content">
         <p>Code can be added either inline or in code blocks.</p>
         <p><strong>inline code</strong></p>
         <pre><code class="language-markdown">inline code is surrounded by backticks `insert code here`. 
@@ -356,6 +368,7 @@ Or you can use the [link text itself].
       return 0;
   }
   </code></pre> -->
+        </div>
       </section>
 
       <!-- Footnote Section -->
@@ -466,6 +479,7 @@ Or you can use the [link text itself].
       <!-- Block Quote Section -->
       <section id="block-quote-section">
         <h2>Block quotes</h2>
+        <div class="section-content">
         <pre><code class="language-markdown">
 &gt; Every line of a block quote
 &gt; must start with a greater than sign
@@ -481,6 +495,7 @@ you can also easily break out of them
         <blockquote>
           <p>and then return to them later</p>
         </blockquote>
+        </div>
       </section>
 
       <!-- Inline HTML Section -->
@@ -573,6 +588,8 @@ you can also easily break out of them
         <li><a href="https://github.github.com/gfm/">GFM Specification</a></li>
       </ul>
     </section> -->
+    
+    <script src="script.js"></script>
     </main>
   </body>
 </html>
