@@ -98,6 +98,13 @@
 
       /* Main Content */
 
+      .right-arrow {
+        vertical-align: middle;
+        height: 24px;
+        width: auto;
+        margin-left: 2px;
+      }
+
       #welcome {
         text-align: center;
         margin-top: 60px;
