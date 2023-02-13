@@ -8,6 +8,7 @@
     <title>Class Notes</title>
   </head>
   <body>
+
     <!-- Top navigation menu -->
     <nav class="topnav">
       <div class="logo">
@@ -21,8 +22,8 @@
       <a href="#">Javascript</a>
       <a href="#">Git</a>
       <a href="#">Linux/Bash</a>
-
     </nav>
+
     <!-- Sidebar Navigation -->
     <nav id="side-nav" class="sidenav">
       <a class="sidenav-link" href="#intro-section">Introduction</a>
@@ -32,24 +33,17 @@
       <a class="sidenav-link" href="#link-section">Links</a>
       <a class="sidenav-link" href="#image-section">Images</a>
       <a class="sidenav-link" href="#code-section">Code Blocks</a>
-      <!-- <a href="#footnote-section">Footnotes</a> -->
-      <!-- <a href="#table-section">Tables</a> -->
       <a class="sidenav-link" href="#block-quote-section">Block Quotes</a>
-      <!-- <a href="#inline-html-section">Inline HTML</a> -->
-      <!-- <a href="#line-break-section">Line Breaks</a> -->
-      <!-- <a href="#task-list-section">Task Lists</a> -->
-      <!-- <a href="#youtube-section">YouTube Videos</a> -->
       <button class="sidenav-toggle">&lt;&lt;  &gt;&gt;</button>
     </nav>
 
     <!-- Main Page Content -->
-
     <h1 id="welcome"></h1>
-
+    <div class="pic-container"></div>
     <!-- Intro Section -->
     <main class="main">
-      <section id="intro-section">
-        <h1>Markdown Cheat Sheet</h1>
+      <header id="intro-section">
+        <h2>Markdown Cheat Sheet</h2>
         <div class="section-content"></div>
         <p>
           As an avid learner and a tech enthusiast, you know the value of having a well-organized and easy to read document. And when it comes to GitHub, GitHub Flavored Markdown (GFM) plays a crucial role in helping you achieve that. With its simple syntax, GFM makes it possible for you to format your text, insert images, videos, and other multimedia elements with ease. And, with this web page, a <a
@@ -65,11 +59,11 @@
         <p>
         </p>
       </div>
-      </section>
+    </header>
 
       <!-- Heading Section -->
       <section id="heading-section">
-        <h2>Headings<img class="right-arrow" src="https://img.icons8.com/external-those-icons-fill-those-icons/24/null/external-down-arrows-those-icons-fill-those-icons-7.png"/></h2>
+        <h2 class="section-header">Headings<img class="right-arrow" src="https://img.icons8.com/external-those-icons-fill-those-icons/24/null/external-down-arrows-those-icons-fill-those-icons-7.png"/></h2>
         <div class="section-content">
         <p>
           Markdown has 6 choices for headings. A heading should start with pound
@@ -294,175 +288,6 @@ Or you can use the [link text itself].
         <pre><code>
   insert code here
   </code></pre>
-        <!-- <p><strong>syntax highlighting</strong></p>
-      <p>
-        With some markdown renderers, code blocks offer syntax highlighting for
-        many programming languages and other types of code. To add syntax
-        highlighting for a code block just write the name of the language after
-        the triple backticks but before the new line. How you specify the
-        language may differ from renderer to renderer if they support it all.
-      </p>
-      <pre><code class="language-markdown">```javascript
-  console.log(&quot;hello, world!&quot;);
-  ```
-  
-  ```python
-  print &quot;hello, world&quot;
-  ```
-  
-  ```markdown
-  **hello, world!**
-  ```
-  </code></pre>
-      <pre><code class="language-javascript">console.log(&quot;hello, world!&quot;);
-  </code></pre>
-      <pre><code class="language-python">print &quot;hello, world&quot;
-  </code></pre>
-      <pre><code class="language-markdown">**hello, world!**
-  </code></pre>
-      <p>
-        don't forget to tell markdown which language you need the highlighting
-        for
-      </p>
-      <pre><code>```
-  #include &lt;iostream&gt;
-  
-  int main() {
-      std::cout &lt;&lt; &quot;You forgot to tell me what language this is dummy&quot;;
-      return 0;
-  }
-  ```
-  
-  ```c++
-  #include &lt;iostream&gt;
-  
-  int main() {
-      std::cout &lt;&lt; &quot;oooh pretty&quot;;
-      return 0;
-  }
-  ```
-  </code></pre>
-      <pre><code>#include &lt;iostream&gt;
-  
-  int main() {
-      std::cout &lt;&lt; &quot;You forgot to tell me what language this is dummy&quot;;
-      return 0;
-  }
-  </code></pre>
-      <pre><code class="language-c++">#include &lt;iostream&gt;
-  
-  int main() {
-      std::cout &lt;&lt; &quot;oooh pretty&quot;;
-      return 0;
-  }
-  </code></pre> -->
-        </div>
-      </section>
-
-      <!-- Footnote Section -->
-      <!-- <section id="footnote-section">
-      <h2>Footnotes</h2>
-      <p>
-        Footnotes aren't officially part of markdown, but are supported by GFM.
-        To make a footnote use square brackets with a caret symbol and a number
-        or word to link to the reference.
-      </p>
-      <pre><code class="language-markdown">Your first footnote[^1]
-  
-  Another footnote with multiple lines in the description[^2]
-  
-  And finally using a word instead of a number[text]
-  
-  [^1]: I did it!
-  [^2]: if you want to use more than one line
-    be certain to include 2 spaces after each line break
-  [text]: I told you that you didn’t have to use numbers
-  </code></pre>
-      <p>Your first footnote[^1]</p>
-      <p>Another footnote with multiple lines in the description[^2]</p>
-      <p>And finally using a word instead of a number[^text]</p>
-      <p>
-        [^1]: I did it! [^2]: If you want to use more than one line be certain
-        to include 2 spaces after each line break [^text]:<br />
-        I told you that you didn’t have to use numbers. They will still show up
-        numbered in your text but this can make it easier for you (the author)
-        to identify. You can also use this &quot;4 spaces after the
-        newline&quot; syntax
-      </p>
-      <p>
-        You can see these footnotes by scrolling to the bottom of this page, or
-        by clicking the number
-      </p>
-    </section> -->
-
-      <!-- Table Section
-    <section id="table-section">
-      <h2>Tables</h2>
-      <p>
-        Tables are not part of Markdown but are include in GFM. You can use
-        table to organize and present some simple data in stead of having to
-        copy a spreadsheet from some other application
-      </p>
-      <pre><code class="language-markdown">| Col 1 | Col 2 | Col 3 |
-  |-------|:-----:|------:|
-  |left   |center |right  |
-  |very   |simple |table  |
-  
-  You don't need the exterior pipes (|). This table is formatted very well in the markdown, but you can use less pretty markdown as you follow the basic syntax. You need at least 3 dashes under the each header column
-  
-  Col 1 | Col 2 | Col 3 
-  ---|---|---
-  still|renders |okay
-  less|organized|table  
-  </code></pre>
-      <table>
-        <thead>
-          <tr>
-            <th>Col 1</th>
-            <th style="text-align: center">Col 2</th>
-            <th style="text-align: right">Col 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>left</td>
-            <td style="text-align: center">center</td>
-            <td style="text-align: right">right</td>
-          </tr>
-          <tr>
-            <td>very</td>
-            <td style="text-align: center">simple</td>
-            <td style="text-align: right">table</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>
-        You don't need the exterior pipes (|). This table is formatted very well
-        in the markdown, but you can use less pretty markdown as you follow the
-        basic syntax. You need at least 3 dashes under the each header column
-      </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Col 1</th>
-            <th>Col 2</th>
-            <th>Col 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>still</td>
-            <td>renders</td>
-            <td>okay</td>
-          </tr>
-          <tr>
-            <td>less</td>
-            <td>organized</td>
-            <td>table</td>
-          </tr>
-        </tbody>
-      </table>
-    </section> -->
 
       <!-- Block Quote Section -->
       <section id="block-quote-section">
@@ -486,97 +311,7 @@ you can also easily break out of them
         </div>
       </section>
 
-      <!-- Inline HTML Section -->
-      <!-- <section id="inline-html-section">
-      <h2>Inline HTML</h2>
-      <pre><code class="language-html">&lt;section&gt;
-      &lt;h1&gt;Inline HTML&lt;/h1&gt;
-      &lt;p&gt;adding HTML directly into your markdown can work pretty well here's a link to the 
-          &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML&quot;&gt;MDN HTML DOCS&lt;/a&gt; 
-          if you want to learn more about HTML
-      &lt;/p&gt;
-  &lt;/section&gt;
-  </code></pre>
-      <p>
-        &lt;section&gt; &lt;h1&gt;Inline HTML&lt;/h1&gt; &lt;p&gt;adding HTML
-        directly into your markdown can work pretty well here's a link to the
-        &lt;a
-        href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML&quot;&gt;MDN
-        HTML DOCS&lt;/a&gt; if you want to learn more about html &lt;/p&gt;
-        &lt;/section&gt;
-      </p>
-    </section> -->
-
-      <!-- Line Break Section
-    <section id="line-break-section">
-      <h2>Line Breaks</h2>
-      <pre><code class="language-markdown">You can experiment with &quot;Markdown Toggle&quot; to experiment and insert line breaks to see how they work 
-  
-  But inserting two newlines between lines starts a new paragraph 
-  and inserting only one just starts a new line 
-  </code></pre>
-      <p>
-        You can experiment with &quot;Markdown Toggle&quot; to experiment and
-        insert line breaks to see how they work
-      </p>
-      <p>
-        But inserting two newlines between lines starts a new paragraph and
-        inserting only one just starts a new line
-      </p>
-    </section> -->
-
-      <!-- Task List Section
-    <section id="task-list-section">
-      <h2>Task Lists</h2>
-      <p>
-        Task lists allow for you to make checkboxes in Mark down. Simply start
-        with an asterisk like a regular list then the put either empty square
-        brackets for uncompleted tasks or put an x in the brackets for a
-        completed task
-      </p>
-      <ul>
-        <li>[x] Task 1</li>
-        <li>[x] Task 2</li>
-        <li>[ ] Task 3</li>
-      </ul>
-    </section> -->
-
-      <!-- Youtube Video Section
-    <section id="youtube-section">
-      <h2>Youtube Videos</h2>
-      <p>
-        You can't directly imbed youtube videos but you can link them with a
-        their thumbnail photo
-      </p>
-      <pre><code class="language-markdown">
-  &lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=HUBNt18RFbo&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://img.youtube.com/vi/HUBNt18RFbo/0.jpg&quot; 
-  alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;
-  </code></pre>
-      <p>
-        &lt;a
-        href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=HUBNt18RFbo&quot;
-        target=&quot;_blank&quot;&gt;&lt;img
-        src=&quot;https://img.youtube.com/vi/HUBNt18RFbo/0.jpg&quot;
-        alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot;
-        height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;
-      </p>
-      <p>you can also use a normal link as seen in the link section</p>
-    </section> -->
-
-      <!-- More Resources Section -->
-
-      <!-- <section id="more-resources-section">
-      <h2>Things I want to learn more about</h2>
-      <ul>
-        <li>Other Markdown Flavors</li>
-        <li>Markdown Specification</li>
-      </ul>
-      <p><strong>resources</strong></p>
-      <ul>
-        <li><a href="https://github.github.com/gfm/">GFM Specification</a></li>
-      </ul>
-    </section> -->
-    
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
     <script src="script.js"></script>
     </main>
   </body>

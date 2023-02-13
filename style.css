@@ -40,15 +40,11 @@
       .logo a {
         padding: 0;
       }
-      /* .topnav a.active {
-        background-color: #04aa6d;
-        color: white;
-      } */
+  
 
       /* Side Navigation */
 
       .sidenav {
-        /* width: 10%; */
         position: fixed;
         z-index: 1;
         top: 75px;
@@ -60,7 +56,6 @@
         border-radius: 6px;
       }
       .sidenav-left {
-        /* width: 10%; */
         position: fixed;
         z-index: 1;
         top: 75px;
