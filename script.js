@@ -15,8 +15,7 @@ function promptForUserNumber() {
   const number = prompt("Please Enter a Number");
   for (let i = 0; i < number; i++) {
     let img = document.createElement('img');
-    console.log(img);
-    img.src = "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg";
+    img.src = "https://i.redd.it/5unn16axx1v81.jpg";
     imgDiv.appendChild(img);
   }
 }
@@ -81,7 +80,9 @@ const createHtmlFromMd = async () => {
 
   let elems = htmlToElements(html);
 
-  document.body.append(...elems);
+  elems.forEach(elem => {
+    document.appendChild(elem);
+  })
 };
 
 createHtmlFromMd();
