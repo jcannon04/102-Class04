@@ -13,6 +13,7 @@ function promptForUserName() {
 function promptForUserNumber() {
   const imgDiv = document.querySelector(".pic-container")
   const number = prompt("Please Enter a Number");
+
   for (let i = 0; i < number; i++) {
     let img = document.createElement('img');
     img.src = "https://i.redd.it/5unn16axx1v81.jpg";
@@ -73,16 +74,17 @@ function htmlToElements(html) {
   return template.content.childNodes;
 }
 
-const createHtmlFromMd = async () => {
-  let fileData = await fetch("test.md");
-  let markdownData = await fileData.text();
-  let html = md.render(markdownData);
+// const createHtmlFromMd = async () => {
+//   let fileData = await fetch("test.md");
+//   let markdownData = await fileData.text();
+//   let html = md.render(markdownData);
 
-  let elems = htmlToElements(html);
-
-  elems.forEach(elem => {
-    document.appendChild(elem);
-  })
-};
+//   let elems = htmlToElements(html);
+//   let testSection = document.querySelector('.test-section');
+//   elems.forEach(elem => {
+//     testSection.append(elem);
+//   })
+//   console.log(elems)
+// };
 
 createHtmlFromMd();
